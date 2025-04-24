@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #000;
+}
+
+.parallax {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('https://images.unsplash.com/photo-1742615869881-95b71cee478c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8') center/cover no-repeat,
+                url('https://images.unsplash.com/photo-1741986947217-d1a0ecc39149?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    animation: scrollBackground 40s linear infinite;
+    background-size: cover, cover, cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: center, 0 0, 0 0;
+    }
+    50% {
+        background-position: center, 100% 0, 0 100%;
+    }
+    100% {
+        background-position: center, 0 0, 0 0;
+    }
+}
+
+.main-title {
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 30px;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-box h2 {
+    color: #000;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.user-name, .pass {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.user-name input, .pass input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    border-radius: 5px;
+    color: #000;
+    font-size: 16px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.user-name label, .pass label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.user-name input:focus + label,
+.user-name input:valid + label,
+.pass input:focus + label,
+.pass input:valid + label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #000;
+}
+
+.user-name input:focus,
+.pass input:focus {
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #333;
+    text-decoration: underline;
+}
