@@ -5,7 +5,7 @@
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 100px;
+    
 }
 
 .product-card {
@@ -71,3 +71,7 @@
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
 } 
+.heading{
+    padding-left: 150px;
+    padding-top: 50px;
+}
